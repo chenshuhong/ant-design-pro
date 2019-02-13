@@ -1,0 +1,46 @@
+@import "../node_modules/normalize.css";//webpack 中~指node_modules，这里是清除浏览器样式，保证所有浏览器的初始样式一致
+
+@px_8:8px;
+:global{
+  button[type="action"]{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ant-layout {
+    min-height: 100vh;
+  }
+
+  .mg1{
+    margin: @px_8;
+  }
+
+  .mg1t{
+    margin-top: @px_8;
+  }
+
+  .mg1b{
+    margin-bottom: @px_8;
+  }
+
+  .mg1l{
+    margin-left: @px_8;
+  }
+
+  .mg1r{
+    margin-right: @px_8;
+  }
+
+  .flex-box{
+    display: flex;
+  }
+
+  .flex-grow-1{
+    flex-grow: 1;
+  }
+}
