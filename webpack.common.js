@@ -87,6 +87,7 @@ module.exports = {
       configs: path.resolve(__dirname, 'src/configs'),
       assets: path.resolve(__dirname, 'src/assets'),
       models: path.resolve(__dirname, 'src/models'),
+      layouts: path.resolve(__dirname, 'src/layouts'),
     },
   },
   module: {

@@ -8,6 +8,7 @@ import ReduxThunk from 'redux-thunk';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from 'models';
+import AppLayout from 'layouts/AppLayout';
 import './index.less';
 
 // compose:从右到左把接收到的函数合成后的最终函数。
@@ -28,7 +29,7 @@ export const store = createStore(
 // <Provider> 让所有容器组件都可以访问 store，而不必显示地传递它。只需要在渲染根组件时使用即可
 const element = (
   <Provider store={store}>
-    <div>test</div>
+    <AppLayout />
   </Provider>
 );
 

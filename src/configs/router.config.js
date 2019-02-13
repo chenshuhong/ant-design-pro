@@ -16,7 +16,7 @@ export default [
   // app
   {
     path: '/',
-    component: 'layouts/BaseicLayout',
+    component: 'layouts/BasicLayout',
     routes: [
       { path: '/', redirect: '/dashboard/analysis' },
       {
