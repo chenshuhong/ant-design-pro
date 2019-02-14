@@ -7,7 +7,8 @@ export default [
   // user
   {
     path: '/user',
-    component: 'layouts/UserLayout',
+    name: 'user',
+    component: 'UserLayout',
     routes: [
       { path: '/user', redirect: '/user/login' },
       { path: '/user/login', component: '/user/Login' },
@@ -16,7 +17,8 @@ export default [
   // app
   {
     path: '/',
-    component: 'layouts/BasicLayout',
+    name: 'app',
+    component: 'BasicLayout',
     routes: [
       { path: '/', redirect: '/dashboard/analysis' },
       {

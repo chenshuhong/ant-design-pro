@@ -2,14 +2,14 @@
  * @Author: 陈树鸿
  * @Date: 2019-02-11
  */
-import ReactDom from 'react-dom';
-import React from 'react';
-import ReduxThunk from 'redux-thunk';
-import { createStore, applyMiddleware, compose } from 'redux';
-import { Provider } from 'react-redux';
-import rootReducer from 'models';
-import AppLayout from 'layouts/AppLayout';
-import './index.less';
+import ReactDom from "react-dom";
+import React from "react";
+import ReduxThunk from "redux-thunk";
+import { createStore, applyMiddleware, compose } from "redux";
+import { Provider } from "react-redux";
+import rootReducer from "models";
+import AppLayout from "layouts/AppLayout";
+import "./index.less";
 
 // compose:从右到左把接收到的函数合成后的最终函数。
 // 当检测到当前浏览器装有redux-devtool时用该插件的的compose取代redux的compose
@@ -22,7 +22,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 // enhancer (Function): Store enhancer 是一个组合 store creator 的高阶函数，返回一个新的强化过的 store creator。这与 middleware 相似，它也允许你通过复合函数改变 store 接口。
 // eslint-disable-next-line import/prefer-default-export
 export const store = createStore(
-  rootReducer, /* preloadedState */
+  rootReducer /* preloadedState */,
   composeEnhancers(applyMiddleware(ReduxThunk)),
 );
 
@@ -33,6 +33,6 @@ const element = (
   </Provider>
 );
 
-const root = document.createElement('div');
+const root = document.createElement("div");
 document.body.appendChild(root);
 ReactDom.render(element, root);
