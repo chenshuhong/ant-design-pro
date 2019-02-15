@@ -80,14 +80,7 @@ module.exports = {
   resolve: {
     // 设置别名
     alias: {
-      src: path.resolve(__dirname, 'src'),
-      components: path.resolve(__dirname, 'src/components'),
-      pages: path.resolve(__dirname, 'src/pages'),
-      utils: path.resolve(__dirname, 'src/utils'),
-      configs: path.resolve(__dirname, 'src/configs'),
-      assets: path.resolve(__dirname, 'src/assets'),
-      models: path.resolve(__dirname, 'src/models'),
-      layouts: path.resolve(__dirname, 'src/layouts'),
+      '@': path.resolve(__dirname, 'src'),
     },
   },
   module: {

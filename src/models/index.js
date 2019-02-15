@@ -3,8 +3,8 @@
  * @Date: 2018-10-30
  */
 import { combineReducers } from 'redux';
-import { store } from 'src';
-import auth from 'models/auth';
+import { store } from '@';
+import auth from '@/models/auth';
 
 const reducers = {
   auth,

@@ -4,21 +4,20 @@
  */
 
 export default [
-  // user
   {
     path: '/user',
     name: 'user',
-    component: 'UserLayout',
+    component: () => import(/* webpackChunkName: "layout_user" */'@/layouts/UserLayout'),
     routes: [
       { path: '/user', redirect: '/user/login' },
-      { path: '/user/login', component: '/user/Login' },
+      { path: '/user/login', component: () => import(/* webpackChunkName: "page_login" */'@/pages/User/Login') },
     ],
   },
   // app
   {
     path: '/',
     name: 'app',
-    component: 'BasicLayout',
+    component: () => import(/* webpackChunkName: "layout_basic" */'@/layouts/BasicLayout'),
     routes: [
       { path: '/', redirect: '/dashboard/analysis' },
       {
@@ -29,7 +28,7 @@ export default [
           {
             path: '/dashboard/analysis',
             name: 'analysis',
-            component: './Dashboard/Analysis',
+            component: () => import(/* webpackChunkName: "page_analysis" */'@/pages/Dashboard/Analysis'),
           },
         ],
       },

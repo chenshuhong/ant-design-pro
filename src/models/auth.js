@@ -3,7 +3,7 @@
  * @Author: 陈树鸿
  * @Date: 2019-02-11
  */
-import { sleep } from 'utils/commonUtil';
+import { sleep } from '@/utils/commonUtil';
 
 // action types
 const LOGIN_ING = 'LOGIN_ING';

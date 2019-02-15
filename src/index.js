@@ -7,9 +7,9 @@ import React from "react";
 import ReduxThunk from "redux-thunk";
 import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
-import rootReducer from "models";
-import AppLayout from "layouts/AppLayout";
-import "./index.less";
+import rootReducer from "@/models";
+import AppLayout from "@/layouts/AppLayout";
+import "@/index.less";
 
 // compose:从右到左把接收到的函数合成后的最终函数。
 // 当检测到当前浏览器装有redux-devtool时用该插件的的compose取代redux的compose
